@@ -76,7 +76,88 @@ Downloads and extracts a prebuilt riscv64-unknown-elf-gcc toolchain with newlib 
           ../configure --prefix=$pwd/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14 --host=riscv64-unknown-elf 
   - #### Build and install
            make -j$(nproc) 
-           sudo make install 
+           sudo make install
+  ## Task 8 — Ensure the cross bin directory is in PATH
+    The proxy kernel (pk) is a minimal runtime that lets Spike run your RISC-V programs like an OS
+
+    - #### Command (current shell):
+            export PATH=$pwd/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0
+            2019.08.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/bin:$PATH
+   - #### Command (persistent):
+             echo 'export PATH=$HOME/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0
+             2019.08.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/bin:$PATH' >> 
+             ~/.bashrc 
+             source ~/.bashrc\
+
+    ## Task 9 — (Optional) Install Icarus Verilog
+ For digital design education, you’ll often verify RTL with Icarus Verilog and view 
+waveforms with GTKWaves. This is not required for the C uniqueness test but is part of a 
+complete RISC‑V learning toolchain.
+
+   ## Task 10 — Quick sanity checks 
+   Confirms the toolchain and simulator are visible and runnable from your shell.
+   - #### command
+             which riscv64-unknown-elf-gcc 
+             riscv64-unknown-elf-gcc -v 
+             which spike 
+             spike --version || spike -h 
+              which pk
+     - #### Output
+           /home/adi231/riscv_toolchain/.../bin/riscv64-unknown-elf-gcc
+           /home/adi231/riscv_toolchain/.../bin/spike
+            /home/adi231/riscv_toolchain/.../bin/pk
+     ## Final Deliverable: A Unique C Test (Username & Machine Dependent)
+      - #### code
+             #include <stdint.h>
+             #include <stdio.h>
+
+            #define USERNAME "adi231"
+            #define HOSTNAME "ubuntu-risk"
+
+            static uint64_t fnv1a64(const char *s) {
+            const uint64_t FNV_OFFSET = 1469598103934665603ULL;
+             const uint64_t FNV_PRIME  = 1099511628211ULL;
+            uint64_t h = FNV_OFFSET;
+             for (const unsigned char *p = (const unsigned char*)s; *p; ++p) {
+              h ^= (uint64_t)(*p);
+              h *= FNV_PRIME;
+               }
+              return h;
+              }
+
+            int main(void) {
+                const char *user = USERNAME;
+               const char *host = HOSTNAME;
+
+                 char buf[256];
+                 int n = snprintf(buf, sizeof(buf), "%s@%s", user, host);
+               if (n <= 0) return 1;
+
+                uint64_t uid = fnv1a64(buf);
+
+                 printf("RISC-V Uniqueness Check\n");
+                 printf("User: %s\n", user);
+               printf("Host: %s\n", host);
+                   printf("UniqueID: 0x%016llx\n", (unsigned long long)uid);
+
+               #ifdef __VERSION__
+                 unsigned long long vlen = (unsigned long long)sizeof(__VERSION__) - 1;
+                 printf("GCC_VLEN: %llu\n", vlen);
+                   #endif
+
+                      return 0;
+              }
+
+        - #### OUTPUT
+                RISC-V Uniqueness Check
+                User: adi231
+               Host: ubuntu-risk
+               UniqueID: 0x94d1814471449918
+               GCC_VLEN: 5
+
+
+ 
+
 
 
 
