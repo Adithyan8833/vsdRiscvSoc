@@ -155,6 +155,12 @@ complete RISC‑V learning toolchain.
                UniqueID: 0x94d1814471449918
                GCC_VLEN: 5
 
+## SCREENSHOT 
+#### INPUT
+<img width="1218" height="684" alt="Screenshot from 2025-08-03 16-09-29" src="https://github.com/user-attachments/assets/fe54ba6d-68c1-4243-9341-6d72bfddaaca" />
+
+
+
 
  
 
@@ -163,6 +169,8 @@ complete RISC‑V learning toolchain.
 
 
 
+#### OUTPUT
+<img width="1218" height="183" alt="Screenshot from 2025-08-03 16-08-33" src="https://github.com/user-attachments/assets/7bb0ba74-c873-46dd-b243-39e1824c653d" />
 
 
 
