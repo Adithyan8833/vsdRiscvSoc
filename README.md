@@ -186,6 +186,8 @@ Confirms the toolchain and simulator are visible and runnable from your shell.
 
 
 
+
+
  
 
 
@@ -195,6 +197,38 @@ Confirms the toolchain and simulator are visible and runnable from your shell.
 
 #### OUTPUT
 <img width="1218" height="183" alt="Screenshot from 2025-08-03 16-08-33" src="https://github.com/user-attachments/assets/7bb0ba74-c873-46dd-b243-39e1824c653d" />
+
+# Task 2 Prove Your Local RISCV Setup (Run, Disassemble,Decode)
+## 🎯 Objective
+Set up and verify a local RISC V toolchain by compiling and running 3 to 4 C programs. Generate and analyze their assembly and disassembly. Manually decode integer instructions and provide proof of local execution using system-specific identifiers.
+
+## 📋 Prerequisites
+- #### RISC-V Toolchain
+  - riscv64-unknown-elf-gcc
+  - riscv64-unknown-elf-objdump
+- #### Spike Simulator
+   - spike
+    - pk (Proxy Kernel)
+- #### Basic Linux Tools
+    - gcc, make, bash, sed, tee, printf, date, etc.
+ 
+## 🚀 Task A —  Uniqueness mechanism
+Before compiling any program, set the following environment variables in your Linux shell to embed user- and machine-specific identifiers into the binary.
+- #### Commands
+      export U=$(id -un)
+      export H=$(hostname -s)
+      export M=$(cat /etc/machine-id | head -c 16)
+      export T=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+      export E=$(date +%s)
+  - #### Verify
+        echo $U
+        echo $H
+        echo $M
+        echo $T
+        echo $E
+
+
+
 
 
 
