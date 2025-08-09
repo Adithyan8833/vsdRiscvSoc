@@ -201,16 +201,6 @@ Confirms the toolchain and simulator are visible and runnable from your shell.
 # Task 2 Prove Your Local RISCV Setup (Run, Disassemble,Decode)
 ## 🎯 Objective
 Set up and verify a local RISC V toolchain by compiling and running 3 to 4 C programs. Generate and analyze their assembly and disassembly. Manually decode integer instructions and provide proof of local execution using system-specific identifiers.
-
-## 📋 Prerequisites
-- #### RISC-V Toolchain
-  - riscv64-unknown-elf-gcc
-  - riscv64-unknown-elf-objdump
-- #### Spike Simulator
-   - spike
-    - pk (Proxy Kernel)
-- #### Basic Linux Tools
-    - gcc, make, bash, sed, tee, printf, date, etc.
  
 ## 🚀 Task A —  Uniqueness mechanism
 Before compiling any program, set the following environment variables in your Linux shell to embed user- and machine-specific identifiers into the binary.
