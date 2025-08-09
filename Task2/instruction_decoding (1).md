@@ -12,8 +12,7 @@ Compute the factorial of a given integer and print the result.
 | lw a5,-20(s0)     | 0000011  | a5 (x15)     | s0 (x8)     | —   | 010    | —        | 111111111011 01000 010 01111 0000011                         | Load word from stack into a5                     |
 | mv a0,a5          | 0110011  | a0 (x10)     | a5 (x15)    | x0  | 000    | 0000000  | 0000000 00000 01111 000 01010 0110011                        | Copy a5 into a0                                  |
 
-**Notes:**  
-This snippet shows the function prologue, immediate loading, memory access, and register movement before calling the factorial function.
+
 
 ---
 
@@ -29,8 +28,6 @@ Find the maximum value in a given integer array and print the result.
 | bge a5,a4,103a2   | 1100011  | —            | a5 (x15)    | a4  | 101    | —        | 0000000 01110 01111 101 00010 1100011                        | Branch if a5 ≥ a4                                |
 | addiw a5,a5,1     | 0011011  | a5 (x15)     | a5 (x15)    | —   | 000    | —        | 000000000001 01111 000 01111 0011011                         | Increment loop index by 1                        |
 
-**Notes:**  
-This snippet shows stack setup, array element loading, conditional branch for max comparison, and loop counter update.
 
 ---
 
@@ -46,8 +43,6 @@ Perform bitwise operations (AND, OR, XOR, shifts) between two integers and displ
 | slliw a5,a5,0x3   | 0011011  | a5 (x15)     | a5 (x15)    | —   | 001    | 0000000  | 000000000011 01111 001 01111 0011011                         | Shift left logical immediate by 3                |
 | srliw a5,a5,0x2   | 0011011  | a5 (x15)     | a5 (x15)    | —   | 101    | 0000000  | 000000000010 01111 101 01111 0011011                         | Shift right logical immediate by 2               |
 
-**Notes:**  
-This sequence covers stack allocation, constant loading, AND operation, left shift, and right shift.
 
 ---
 
@@ -63,5 +58,3 @@ Sort an array of integers using the Bubble Sort algorithm and display the sorted
 | add a5,a5,a4      | 0110011  | a5 (x15)     | a5 (x15)    | a4  | 000    | 0000000  | 0000000 01110 01111 000 01111 0110011                        | Add contents of a5 and a4                        |
 | blt a4,a5,10458   | 1100011  | —            | a4 (x14)    | a5  | 100    | —        | 0000000 01111 01110 100 XXXXX 1100011                        | Branch if a4 < a5                                |
 
-**Notes:**  
-This snippet shows stack allocation, immediate loading, data movement, addition, and conditional branching in bubble sort.
