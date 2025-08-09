@@ -116,6 +116,8 @@ Create a reusable header for printing build/run metadata like user, host, machin
      riscv64-unknown-elf-objdump-d ./factorial | sed-n '/<main>:/,/^$/p' | tee
      factorial_main_objdump.txt
 #### Output
+<img width="839" height="523" alt="factorial" src="https://github.com/user-attachments/assets/167166d3-e53a-43f3-86d3-f97baa59e488" />
+
 
 
 ## 🚀 Task 2.4 —  Programs to implement  max_array.c
@@ -145,6 +147,8 @@ Create a reusable header for printing build/run metadata like user, host, machin
      riscv64-unknown-elf-objdump-d ./max_array | sed-n '/<main>:/,/^$/p' | tee
      max_array_main_objdump.txt
 #### Output
+<img width="839" height="620" alt="max_array" src="https://github.com/user-attachments/assets/0c8e154a-eb81-43f3-9a82-8e5695d94b73" />
+
 
 
 ## 🚀 Task 2.5 —  Programs to implement  bitops.c
@@ -176,6 +180,8 @@ Create a reusable header for printing build/run metadata like user, host, machin
      riscv64-unknown-elf-objdump-d ./bitops | sed-n '/<main>:/,/^$/p' | tee
      bitops_main_objdump.txt
 #### Output
+<img width="1005" height="587" alt="bitops" src="https://github.com/user-attachments/assets/c73a694c-acca-4ccf-a0fb-3f85764e5a64" />
+
 
 
 ## 🚀 Task 2.6 —  Programs to implement  bubble_sort.c
@@ -206,6 +212,21 @@ Create a reusable header for printing build/run metadata like user, host, machin
      riscv64-unknown-elf-objdump-d ./bubble_sort | sed-n '/<main>:/,/^$/p' | tee
      bubble_sort_main_objdump.txt
 #### Output
+<img width="853" height="578" alt="bubble_sort" src="https://github.com/user-attachments/assets/cd2aea70-a08f-4978-af4e-4beea7bcb8e3" />
+
+## 📌 Conclusion
+
+This repository demonstrates the successful completion of **RISC-V Task 2**:
+ 
+- Compilation and execution of multiple C programs on Spike with unique identity headers  
+- Generation of assembly and `main`-function disassemblies  
+- Manual decoding of RISC-V integer instructions  
+- Structured organization of all source files, outputs, and documentation  
+
+All outputs were verified for **correctness**, **uniqueness**, and **alignment with task requirements**.  
+This work confirms a functional RISC-V workflow and a clear understanding of RISC-V assembly interpretation.
+
+
 
 
 
