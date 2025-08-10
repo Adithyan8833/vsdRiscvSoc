@@ -231,6 +231,10 @@ Confirms the toolchain and simulator are visible and runnable from your shell.
 <img width="1218" height="183" alt="Screenshot from 2025-08-03 16-08-33" src="https://github.com/user-attachments/assets/7bb0ba74-c873-46dd-b243-39e1824c653d" />
 
 
+### 📂 [Task 2](https://github.com/Adithyan8833/vsdRiscvSoc/tree/main/Task2)
+### [📸 Screenshots](https://github.com/Adithyan8833/vsdRiscvSoc/tree/main/Screenshot)
+
+
 
 
 
