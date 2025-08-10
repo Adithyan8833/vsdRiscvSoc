@@ -226,6 +226,9 @@ This repository demonstrates the successful completion of **RISC-V Task 2**:
 All outputs were verified for **correctness**, **uniqueness**, and **alignment with task requirements**.  
 This work confirms a functional RISC-V workflow and a clear understanding of RISC-V assembly interpretation.
 
+#### [unique.h](https://github.com/Adithyan8833/vsdRiscvSoc/blob/main/Task2/unique.h)
+
+
 #### 📂 [Instruction Decode Documentation](https://github.com/Adithyan8833/vsdRiscvSoc/blob/main/Task2/instruction_decode.md)
 
 #### [📸 Screenshots](https://github.com/Adithyan8833/vsdRiscvSoc/tree/main/Screenshot)
