@@ -24,6 +24,18 @@ This includes compilers, linkers, autotools, and waveform visualizer **GTKWave**
 
 This section lists the essential build prerequisites for the RISC-V simulator, proxy kernel, and related tools, including compilers, linkers, autotools, and necessary libraries. 
 
+- #### command
+       sudo apt-get install -y git vim autoconf automake autotools-dev curl \ 
+       libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex \ 
+       texinfo gperf libtool patchutils bc zlib1g-dev libexpat1-dev gtkwave
+
+#### output
+<img width="1132" height="728" alt="task_1 1f" src="https://github.com/user-attachments/assets/c1e1790b-c6d4-4d4d-9dbc-511f20194811" />
+
+<img width="922" height="709" alt="task_1 1s" src="https://github.com/user-attachments/assets/7ec6df15-e0bc-4b14-940c-3fb1dc3c90e6" />
+
+
+
 ## 🚀 Task 1.2 — Create a clean workspace and capture your home path 
 
 Sets up a dedicated working directory (~/riscv_toolchain) from the home path to keep all toolchain files isolated and manageable. This ensures a clean environment that's easy to update, remove, or archive later.
@@ -46,6 +58,16 @@ Downloads and extracts a prebuilt riscv64-unknown-elf-gcc toolchain with newlib 
 
 - #### Extract (x), Verbose (v), Gunzip (z), From file (f)
       tar -xvzf riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14.tar.gz
+
+  #### output
+  <img width="1132" height="728" alt="task_1 2f" src="https://github.com/user-attachments/assets/b8951306-ff82-4cae-99d9-1f7fabe13db8" />
+
+  <img width="1132" height="728" alt="task_1 2s" src="https://github.com/user-attachments/assets/a7387d4c-a70a-44d0-b7c9-075ebf99fdfa" />
+
+  <img width="1132" height="292" alt="task1 2list" src="https://github.com/user-attachments/assets/ff26b9ec-ec05-4ae6-82ca-ee5f96e5513f" />
+
+
+
   
 ## 🚀 Task 1.4 — Add toolchain to your PATH (current shell + persistent) 
 
@@ -68,6 +90,9 @@ DTC is needed by many RISC‑V tools as a common SoC/simulator dependency.
     ```
     Version: DTC 1.6.1
     ```
+#### output
+<img width="1132" height="64" alt="Screenshot from 2025-08-10 12-27-22" src="https://github.com/user-attachments/assets/8637ba4b-f7e7-460d-8ff6-3672e33bd62d" />
+
 ## 🚀 Task 1.6 — Build and install Spike (RISC‑V ISA simulator)
 spike is the official RISC-V ISA simulator used to run and verify compiled ELF binaries, and installing it in the same prefix keeps all tools organized together.
 
@@ -85,6 +110,9 @@ spike is the official RISC-V ISA simulator used to run and verify compiled ELF b
       make -j$(nproc)
 - #### bInstall built binaries
       sudo make install
+
+  <img width="1132" height="692" alt="task_1 4f" src="https://github.com/user-attachments/assets/cc8326ab-f9de-4930-bc83-297d2ca493f1" />
+
 
 ## 🚀 Task 1.7 — Build and install the RISC‑V Proxy Kernel (riscv-pk)
 The proxy kernel (pk) is a minimal runtime that lets Spike run your RISC-V programs like an OS.
@@ -128,6 +156,10 @@ Confirms the toolchain and simulator are visible and runnable from your shell.
       /home/adi231/riscv_toolchain/.../bin/riscv64-unknown-elf-gcc
       /home/adi231/riscv_toolchain/.../bin/spike
       /home/adi231/riscv_toolchain/.../bin/pk
+
+  #### Output
+  <img width="1132" height="482" alt="task_10" src="https://github.com/user-attachments/assets/6fb47b4e-0fc6-4dda-a32a-8e89a9ccbe5e" />
+
   
 ## 🚀 Final Deliverable: A Unique C Test (Username & Machine Dependent)
 
